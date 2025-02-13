@@ -23,7 +23,7 @@ services:
     environment:
       - WEBSOCKET_ENABLED=true
       - SIGNUPS_ALLOWED=true
-      - ADMIN_TOKEN=<@@Kkw88dby6Vini369>  # Substitua por um token seguro para acessar
+      - ADMIN_TOKEN=<--palavra--passe-->  # Substitua por um token seguro para acessar
     volumes:
       - ./vw-data:/data
     networks:
