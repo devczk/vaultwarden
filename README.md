@@ -1,23 +1,19 @@
-# vaultwarden
-Guia para gestão de senhas selfhosted sem custos adicionais, com uma plataforma que gere a nível de permissões, organizações e diversos features.
+# Guia de instalação do VaultWarden no Linux
+> Guia para gestão de senhas selfhosted sem custos adicionais, com uma plataforma que gere a nível de permissões, organizações e diversos features.
 
-O VaultWarden é uma ferramenta de gestão de senhas que pode ser hospedado localmente (selfhosted), oferecendo autenticação de dois fatores, gerenciamento de usuários e acesso multinível. Portanto, é uma solução para gerenciamento de informações individual e em âmbito corporativo.
+### O VaultWarden é uma ferramenta de gestão de senhas que pode ser hospedado localmente, oferecendo autenticação de dois fatores, gerenciamento de usuários e acesso multinível. Portanto, é uma solução para gerenciamento de informações individual e em âmbito corporativo.
 
 Segue abaixo guia para instalação do Vaultwarden no Linux utilizando Docker:
-1) Crie um diretório para instalar o VaultWarden
--> mkdir vaultwarden
-2) Para utilizar o VaultWarden é necessário configurar um Certificado SSL para garantir que a conexão seja criptografada de forma segura. Existem diversos tutoriais na internet de como utilizar o certbot e demais ferramenas para gerar os arquivos de certificado. Uma vez que tenha esses arquivos, armazena-los diretamente na pasta criada do VaultWarde, o diretório ficará com a seguinte estrutura:
+### 1) Crie um diretório para instalar o VaultWarden
+` mkdir vaultwarden`
+### 2) Para utilizar o VaultWarden é necessário configurar um Certificado SSL para garantir que a conexão seja criptografada de forma segura. Existem diversos tutoriais na internet de como utilizar o certbot e demais ferramenas para gerar os arquivos de certificado. Uma vez que tenha esses arquivos, armazena-los diretamente na pasta criada do VaultWarde, o diretório ficará com a seguinte estrutura:
 
--> docker-compose.yml
--> cert
-   -> cert.crt
-   -> cert.key
-   -> fullchain.crt
-   -> intermediate.crt
--> nginx.conf
+![Captura de tela 2025-02-13 163003](https://github.com/user-attachments/assets/7c9ea39e-a553-4d6d-9eff-1307e77ce2ee)
 
-3) Abaixo segue composição do arquivo docker-compose.yml:
+![Captura de tela 2025-02-13 163013](https://github.com/user-attachments/assets/fab100b1-9256-4a5c-8c1f-c4070db0ed6f)
 
+### 3) Abaixo segue composição do arquivo docker-compose.yml:
+```
 version: "3.8"
 
 services:
@@ -53,12 +49,12 @@ services:
 
 networks:
   vaultwarden-net:
-    driver: bridge
+    driver: bridge 
+```
+### 4) No arquivo acima, definimos a importação do VaultWarden e do NGINX para criação do server web.
 
-4) No arquivo acima, definimos a importação do VaultWarden e do NGINX para criação do server web.
+### 5) Após realizar os passos anteriores, pode construir o container através do comando:
+ `docker-compose up -d`
 
-5) Após realizar os passos anteriores, pode construir o container através do comando:
--> docker-compose up -d
-
-6) Para verificar se os containers estão rodando:
--> docker-compose ps
+### 6) Para verificar se os containers estão rodando:
+`docker-compose ps`
