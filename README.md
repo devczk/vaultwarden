@@ -54,7 +54,24 @@ networks:
 ### 4) No arquivo acima, definimos a importação do VaultWarden e do NGINX para criação do server web.
 
 ### 5) Após realizar os passos anteriores, pode construir o container através do comando:
+
+## Interface de Utilização do VaultWarden
  `docker-compose up -d`
 
 ### 6) Para verificar se os containers estão rodando:
 `docker-compose ps`
+
+## Visualização da Interface:
+
+### Tela de Login:
+![Captura de tela 2025-02-13 163321](https://github.com/user-attachments/assets/e1d88300-188a-491d-82c9-bfc45bf3a3b3)
+### Tipos de Registros que Podem ser Armazenados
+![Captura de tela 2025-02-13 163444](https://github.com/user-attachments/assets/10b8af41-ce8c-4c7d-b2f0-5e75f01a44c7)
+### Opções de Autenticação:
+![Captura de tela 2025-02-13 163509](https://github.com/user-attachments/assets/de90038b-66ee-451e-80a5-bf6ae0b45357)
+### Gerador de Senhas Complexas
+![Captura de tela 2025-02-13 163519](https://github.com/user-attachments/assets/2fa3c14e-103f-4da0-9c0b-11884d04b4c1)
+### Relatórios de Vulnerabilidade e Análise de Registros Internos 
+![Captura de tela 2025-02-13 163547](https://github.com/user-attachments/assets/33e4989e-727b-43db-b525-f9199acdf232)
+
+
