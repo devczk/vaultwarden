@@ -1,0 +1,36 @@
+  GNU nano 7.2                                                                     docker-compose.yml                                                                               version: "3.8"
+
+services:
+  vaultwarden:
+    container_name: vaultwarden
+    image: vaultwarden/server:latest
+    environment:
+      - WEBSOCKET_ENABLED=true
+      - SIGNUPS_ALLOWED=true
+      - ADMIN_TOKEN=<@@Kkw88dby6Vini369>  # Substitua por um token seguro para acessar
+    volumes:
+      - ./vw-data:/data
+    networks:
+      - vaultwarden-net
+    restart: unless-stopped
+    expose:
+      - "80"  # O serviço do Vaultwarden estará disponível na rede interna na porta 80
+
+  nginx:
+    container_name: nginx
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf  # Arquivo de configuração do Nginx
+      - ./cert:/etc/ssl/certs  # Certificados SSL (mapear o diretório onde os certificados estão)
+    ports:
+      - "80:80"  # Expondo a porta 80 do Nginx
+      - "443:443"  # Expondo a porta 443 para SSL
+    networks:
+      - vaultwarden-net
+    depends_on:
+      - vaultwarden
+    restart: unless-stopped
+
+networks:
+  vaultwarden-net:
+    driver: bridge
