@@ -66,7 +66,7 @@ networks:
 ### Tela de Login:
 ![Captura de tela 2025-02-13 163321](https://github.com/user-attachments/assets/e1d88300-188a-491d-82c9-bfc45bf3a3b3)
 ### Tipos de Registros que Podem ser Armazenados
-![Captura de tela 2025-02-13 163444](https://github.com/user-attachments/assets/10b8af41-ce8c-4c7d-b2f0-5e75f01a44c7)
+![Captura de tela 2025-02-13 163444](https://github.com/user-attachments/assets/817210e5-7e5f-4cf4-bc9e-8016685ba65d)
 ### Opções de Autenticação:
 ![Captura de tela 2025-02-13 163509](https://github.com/user-attachments/assets/de90038b-66ee-451e-80a5-bf6ae0b45357)
 ### Gerador de Senhas Complexas
