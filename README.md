@@ -6,7 +6,7 @@
 Segue abaixo guia para instalação do Vaultwarden no Linux utilizando Docker:
 ### 1) Crie um diretório para instalar o VaultWarden
 ` mkdir vaultwarden`
-### 2) Para utilizar o VaultWarden é necessário configurar um Certificado SSL para garantir que a conexão seja criptografada de forma segura. Existem diversos tutoriais na internet de como utilizar o certbot e demais ferramenas para gerar os arquivos de certificado. Uma vez que tenha esses arquivos, armazena-los diretamente na pasta criada do VaultWarde, o diretório ficará com a seguinte estrutura:
+### 2) Para utilizar o VaultWarden é necessário configurar um Certificado SSL para garantir que a conexão seja criptografada de forma segura. Existem diversos tutoriais na internet de como utilizar o certbot e demais ferramenas para gerar os arquivos de certificado. Uma vez que tenha esses arquivos, armazena-los diretamente na pasta criada do VaultWarden, o diretório ficará com a seguinte estrutura:
 
 ![Captura de tela 2025-02-13 163003](https://github.com/user-attachments/assets/7c9ea39e-a553-4d6d-9eff-1307e77ce2ee)
 
